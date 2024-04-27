@@ -1,1 +1,3 @@
-just something im messing with at the moment.
+<image src="/assets/icon.png"></image>
+<br></br>
+<h1>Test website!</h1>
