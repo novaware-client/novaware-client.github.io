@@ -27,26 +27,3 @@
 		font-family: arial;
 	}
 </style>
-
-<footer>
-	<style>
-		#version {
-			float: left;
-			padding-bottom: 10px;
-			padding-top: 10px;
-			text-align: left;
-			bottom: 0px;
-			width: 100%;
-			position: absolute;
-		}
-	</style>
-	<script>
-		fetch('https://api.github.com/repos/novaware-client/novaware-client.github.io/commits')
-  		.then(function(response) {
-			response.text().then(function(text) {
-				document.getElementById("version").textContent = document.getElementById("version").textContent + JSON.parse(text).length.toString();
-			});
-		});
-	</script>
-	<div id="version">Version: </div>
-</footer>
