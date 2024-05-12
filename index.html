@@ -20,6 +20,6 @@
 fetch('https://api.github.com/repos/novaware-client/novaware-client.github.io/commits')
   .then(function(response) {
     response.text().then(function(text) {
-      document.getElementById("version").textContent = ocument.getElementById("version").textContent + JSON.parse(text).length;
+      document.getElementById("version").textContent = document.getElementById("version").textContent + JSON.parse(text).length;
     });
   });
