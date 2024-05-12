@@ -1,26 +1,29 @@
 <title>Novaware</title>
-<image src="/assets/icon.png"></image>
-<h1>Lol</h1>
-<script>console.log("Does javascript work on GitHub pages?")</script>
+//<link rel="icon" type="image/x-icon" href="/assets/icon.png">
+<body>
+	<h1>Lol</h1>
+</body>
 
 <style body>background-image: linear-gradient(135deg, #4d004d 0%, #00006e 100%)</style>
 
-<style>
-#version {
-	float: left;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	text-align: left;
-	bottom: 0px;
-	width: 100%;
-}
-</style>
-<div id="version">Version: </div>
-<script>
-fetch('https://api.github.com/repos/novaware-client/novaware-client.github.io/commits')
-  .then(function(response) {
-    response.text().then(function(text) {
-      document.getElementById("version").textContent = document.getElementById("version").textContent + JSON.parse(text).length.toString();
-    });
-  });
-</script>
+<footer>
+	<style>
+		#version {
+			float: left;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			text-align: left;
+			bottom: 0px;
+			width: 100%;
+		}
+	</style>
+	<script>
+		fetch('https://api.github.com/repos/novaware-client/novaware-client.github.io/commits')
+  		.then(function(response) {
+			response.text().then(function(text) {
+				document.getElementById("version").textContent = document.getElementById("version").textContent + JSON.parse(text).length.toString();
+			});
+		});
+	</script>
+	<div id="version">Version: </div>
+</footer>
